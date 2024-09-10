@@ -1,0 +1,30 @@
+#!/usr/bin/expect -f
+
+# Sets the waiting time
+set timeout -1
+
+# Start command
+spawn sudo perl Makefile.PL
+
+# Automatically answers questions
+expect "Do you want to continue? [y/N] "
+send "y\r"
+
+expect "Choose installation directory:"
+send "2\r"
+
+expect "Do you want to install required Perl modules? [y/N] "
+send "y\r"
+
+expect "Do you want to configure the OCS Inventory Agent now? [y/N] "
+send "y\r"
+
+expect "Enter the OCS Inventory server URL:"
+send "http://your.ocs.server/ocsinventory\r" 
+# For example: 10.0.0.1
+
+expect "Do you want to enable the OCS Inventory Agent service now? [y/N] "
+send "y\r"
+
+# Finishes interaction
+expect eof
