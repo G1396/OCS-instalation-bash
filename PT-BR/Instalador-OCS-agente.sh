@@ -12,6 +12,7 @@ sudo apt-get install -y expect
 # Baixa o script expect
 echo "Baixando o script expect..."
 cat <<EOF > expect.exp
+
 #!/usr/bin/expect -f
 
 # Define o tempo de espera
@@ -34,7 +35,8 @@ expect "Do you want to configure the OCS Inventory Agent now? [y/N] "
 send "y\r"
 
 expect "Enter the OCS Inventory server URL:"
-send "http://10.0.5.121/ocsinventory\r"
+send "http://your.ocs.server/ocsinventory\r"
+# Por exemplo: 10.0.48.50
 
 expect "Do you want to enable the OCS Inventory Agent service now? [y/N] "
 send "y\r"
