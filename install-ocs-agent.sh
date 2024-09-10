@@ -34,7 +34,8 @@ expect "Do you want to configure the OCS Inventory Agent now? [y/N] "
 send "y\r"
 
 expect "Enter the OCS Inventory server URL:"
-send "http://your.ocs.server/ocsinventory\r" # For example: 10.0.0.1
+send "http://your.ocs.server/ocsinventory\r" 
+# For example: 10.0.0.1
 
 expect "Do you want to enable the OCS Inventory Agent service now? [y/N] "
 send "y\r"
